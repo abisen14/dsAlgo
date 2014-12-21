@@ -1,7 +1,10 @@
 package com.abhinav.algorithm.sort;
 
-import static java.lang.System.*;
+/*
+ * Running time O(n*n), but fewer swaps that Bubble Sort
+ */
 
+import static java.lang.System.*;
 import java.util.Arrays;
 
 public class SelectionSort {

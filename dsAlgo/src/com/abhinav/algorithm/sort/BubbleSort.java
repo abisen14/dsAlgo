@@ -1,5 +1,7 @@
 package com.abhinav.algorithm.sort;
-
+/*
+ * Running time O(n*n)
+ */
 import static java.lang.System.*;
 import java.util.Arrays;
 
