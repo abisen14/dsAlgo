@@ -5,7 +5,7 @@ public class Stack {
 	private int top;
 	private int[] stackArray;
 	
-	public void Stack(int s){
+	public Stack(int s){
 		size = s;
 		stackArray = new int[size];
 		top = -1;
@@ -15,7 +15,7 @@ public class Stack {
 		stackArray[++top] = number;
 	}
 	
-	public int pop(int number){
+	public int pop(){
 		return stackArray[top--];
 	}
 	
