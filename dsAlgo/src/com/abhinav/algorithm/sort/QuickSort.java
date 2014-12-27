@@ -1,3 +1,16 @@
+/**
+ * Avg or Best case time complexity = O(nlogn)
+ * Worst case (when already sorted) = O(n*n)
+ * This can be resolved by using randomized partitioning i.e. pivot is not the end element but is chosen randomly.
+ * randomizedPartition(int[]A, int startIndex, int endIndex)
+ * {
+ *   randomPivot = rand(start, end);
+ *   swap (ranndomPivot, end);
+ *   partition(A, startIndex, endIndex);
+ *   
+ * }
+ */
+
 package com.abhinav.algorithm.sort;
 
 import java.util.Arrays;
