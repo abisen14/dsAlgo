@@ -200,6 +200,15 @@ class Tree{
 		}
 	}
 	
+	public static int count (Node countNode, int count){
+		if(countNode ==null)
+			return count;
+		count++;
+		count = count(countNode.leftChild, count);
+		count = count(countNode.rightChild, count);
+		return count;
+		
+	}
 	
 	
 }
