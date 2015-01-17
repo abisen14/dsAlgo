@@ -49,9 +49,9 @@ class graph{
 		dfsStack.push(0);
 		
 		while(!dfsStack.isEmpty()){
-			int v = getAdjUnvisitedVertex(dfsStack.pop());
-			if ( v == -1){
-				System.out.println("Just before pop");
+			int v = getAdjUnvisitedVertex(dfsStack.peek());
+			if ( v == -1 ){
+				//System.out.println("Just before pop");
 				dfsStack.pop();
 			}
 			else {
