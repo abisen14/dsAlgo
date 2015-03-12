@@ -1,0 +1,30 @@
+Char at i : 0is : a
+a
+Char at i : 1is : b
+ab
+Char at i : 2is : c
+abc
+Char at i : 3is : d
+abcd
+Char at i : 3is : d
+abd
+Char at i : 2is : c
+ac
+Char at i : 3is : d
+acd
+Char at i : 3is : d
+ad
+Char at i : 1is : b
+b
+Char at i : 2is : c
+bc
+Char at i : 3is : d
+bcd
+Char at i : 3is : d
+bd
+Char at i : 2is : c
+c
+Char at i : 3is : d
+cd
+Char at i : 3is : d
+d

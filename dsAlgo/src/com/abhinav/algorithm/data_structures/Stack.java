@@ -17,6 +17,7 @@ public class Stack {
 	
 	public int pop(){
 		return stackArray[top--];
+			
 	}
 	
 	public int peek(){

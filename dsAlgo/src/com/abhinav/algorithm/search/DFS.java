@@ -1,6 +1,7 @@
 package com.abhinav.algorithm.search;
 
 import com.abhinav.algorithm.data_structures.Stack;
+import com.abhinav.algorithm.data_structures.Queue;;
 
 class vertex{
 	public char nodeName;
@@ -18,6 +19,7 @@ class graph{
 	private int adjMatrix[][];
 	private int vertexNum;
 	private Stack dfsStack;
+	private Queue bfsQueue;
 	
 	public graph(){
 		vertexList = new vertex[numVertex];
@@ -27,6 +29,7 @@ class graph{
 			for (int j =0; j< numVertex; j++)
 				adjMatrix[i][j]=0;
 		dfsStack = new Stack(numVertex);
+		bfsQueue = new Queue(numVertex);
 		
 	}
 	
@@ -60,6 +63,22 @@ class graph{
 				dfsStack.push(v);
 			}
 			
+		}
+	}
+	
+	public void bfs(){
+		vertexList[0].flag = true;
+		displayVertex(0);
+		bfsQueue.insert(0);
+		int v2;
+		
+		while(!bfsQueue.isEmpty()){
+			int v1 = bfsQueue.remove();
+			while ((v2 = getAdjUnvisitedVertex(v1)) != -1){
+				vertexList[v2].flag = true;
+				displayVertex(v2);
+				bfsQueue.insert(v2);
+			}
 		}
 	}
 
@@ -98,8 +117,11 @@ public class DFS {
 		dfsGraph.addEdge(6, 7);
 		dfsGraph.addEdge(3, 8);
 		
-		System.out.println("DFS :");
-		dfsGraph.dfs();
+		//System.out.println("DFS :");
+		//dfsGraph.dfs();
+		
+		System.out.println ("This is BFS: ");
+		dfsGraph.bfs();
 		
 	}
 
