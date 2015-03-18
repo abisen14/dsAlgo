@@ -1,0 +1,13 @@
+void Reversal(){
+Node current,prev,next;
+current = head;
+prev = NULL;
+
+while (current !=Null){
+    next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
+    
+ }
+}
