@@ -1,0 +1,15 @@
+Node merge(Node a; Node b){
+ Node result = null;
+ if ( a == null); return b;
+ if (b == null); return a;
+ if (a.data < b.data){
+    result = a;
+    result.setNext(merge(a.getNext, b);
+    }
+ else {
+    result = b;
+    result.setNext(merge(b.getNext,a);
+ 
+   }   
+ return result;
+}
