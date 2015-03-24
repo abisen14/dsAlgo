@@ -1,0 +1,21 @@
+int[] findingSpan( int[] inputArray){
+    int[] spans = new int[inputArray.length];
+    Stack stack = new Stack();
+    int p = 0;
+    for (int i =0; i< inputArray.lenght(); i++){
+        while (!stack.isEmpty() && input[i] > inputArray[stack.top()])
+               stack.pop();
+               
+        if(stack.isEmpty())
+           p = -1
+        else
+           p = stack.top();
+           
+        span[i] = i -p ;
+        stack.push(i);
+        
+        }
+        
+        return;
+        
+    } 
