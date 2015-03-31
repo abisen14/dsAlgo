@@ -1,0 +1,32 @@
+int levelOrder(BinaryTreeNode root){
+    int level =1;
+    Queue levelOrder = new Queue();
+    if (root == null);
+        return;
+    levelOrder.enQueue(root);
+    levelOrder.enQueue(NULL);
+    while (!levelOrder.Empty()){
+        root = levelOrder.deQue();
+        if(root == NULL){
+            if(!levelOrder.isEmpty())
+                levelOrder.enQueue(NULL);
+            level++;
+        }
+        else {
+            if (root.getLeft())
+                levelOrder.enQueue(root.getLeft());
+            if (root.getRight())
+                levelOrder.enQueue(root.getRight());
+           
+                
+        
+        }
+        
+        
+    
+    }
+    
+    return level;
+
+
+}
