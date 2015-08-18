@@ -1,0 +1,17 @@
+bool findLoop(LinkNode head){
+     LinkNode slowPtr = head, fastPtr = head;
+     while (slowPtr != NULL && fastPtr != NULL){
+         fastPtr = fastPtr.next();
+         if (fastPtr == NULL) return 0;
+         if (fastPtr ==slowPtr) return 1;
+         fastPtr = fastPtr.next();
+         if (fastPtr == slowPtr) return 1;
+         slowPtr = slowPtr.next();
+     
+     }
+     
+     return 0;
+}
+
+//Once loop is detected re-assign slowPtr to head and move both fast and slow pointer by one and the place they 
+// meet is starting of the loop ; also the counter that increase untill they meet will give length of loop.
